@@ -5,39 +5,33 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
 	use Notifiable;
 	
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
+	/** @var array  */
 	protected $fillable = [
-		'name', 'email', 'password',
+		'firstname', 'lastname', 'email', 
+		'password', 'type',
 	];
 	
-	/**
-	 * The attributes that should be hidden for arrays.
-	 *
-	 * @var array
-	 */
+	/** @var array */
 	protected $hidden = [
 		'password', 'remember_token',
 	];
 	
-	/**
-	 * The attributes that should be cast to native types.
-	 *
-	 * @var array
-	 */
-	protected $casts = [
-	'email_verified_at' => 'datetime',
+	/** @var array */
+	protected $attributes = [
+		'type' => 0
 	];
-
+	
+	/** @var array  */
+	protected $casts = [
+		'email_verified_at' => 'datetime',
+	];
 
 	/**
 	 * Get the identifier that will be stored in the subject claim of the JWT.
@@ -57,5 +51,36 @@ class User extends Authenticatable implements JWTSubject
 	public function getJWTCustomClaims()
 	{
 		return [];
+	}
+
+	/**
+	 * Automatically hash plain user password.
+	 * 
+	 * @param $value
+	 */
+	public function setPasswordAttribute($value) {
+		$this->attributes['password'] = Hash::make($value);
+	}
+
+	/** @var array */
+	public const TYPES = [
+		0 => 'customer',
+		1 => 'servicer',
+	];
+	
+	/**
+	 * Return proper type name for user.
+	 *
+	 * @return mixed|string
+	 */
+	public function getTypeAttribute()
+	{
+		return self::TYPES[$this->attributes['type']];
+	}
+
+	/** @return string  */
+	public function getFullNameAttribute()
+	{
+		return "{$this->firstname} {$this->lastname}";
 	}
 }

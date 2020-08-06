@@ -20,20 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fe55e4-3003-4b57-a885-ee7143935190" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/servico.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/servico.api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/BasicTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -169,7 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -185,7 +184,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596655510352</updated>
-      <workItem from="1596655515225" duration="924000" />
+      <workItem from="1596655515225" duration="7622000" />
+      <workItem from="1596724203836" duration="579000" />
+      <workItem from="1596739213823" duration="7224000" />
     </task>
     <servers />
   </component>
@@ -202,19 +203,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2219" y="166" width="362" height="780" key="#EditorConfig" timestamp="1596655684375">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2219" y="166" width="362" height="780" key="#EditorConfig/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596655684375" />
-    <state x="1904" y="190" width="992" height="733" key="SettingsEditor" timestamp="1596655753321">
+    <state x="2227" y="176" width="335" height="760" key="RollbackChangesDialog" timestamp="1596745793595">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="1904" y="190" width="992" height="733" key="SettingsEditor/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596655753321" />
-    <state x="2063" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1596656389499">
+    <state x="2227" y="176" width="335" height="760" key="RollbackChangesDialog/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596745793595" />
+    <state x="1904" y="190" width="992" height="733" key="SettingsEditor" timestamp="1596658081616">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2063" y="261" width="672" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596656389499" />
+    <state x="1904" y="190" width="992" height="733" key="SettingsEditor/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596658081616" />
+    <state x="2064" y="254" key="run.anything.popup" timestamp="1596658013502">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2064" y="254" key="run.anything.popup/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596658013502" />
+    <state x="2063" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1596724210278">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="467" y="398" width="672" height="565" key="search.everywhere.popup/1440.0.1920.1080/0.180.1440.900@0.180.1440.900" timestamp="1596660509088" />
+    <state x="2063" y="261" width="672" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.180.1440.900@1440.0.1920.1080" timestamp="1596724210278" />
   </component>
 </project>
