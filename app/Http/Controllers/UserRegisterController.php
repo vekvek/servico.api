@@ -19,10 +19,10 @@ class UserRegisterController extends Controller
 	public function __invoke(Request $request)
 	{
 		$data = $request->validate([
-			'firstname' => 'required|string|max:48',
-			'lastname' => 'required|string|max:48',
-			'email' => 'required|string|email|max:255|unique:users',
-			'password' => 'required|string|min:6|confirmed',
+			'firstname' => ['required', 'string', 'max:48'],
+			'lastname' => ['required', 'string', 'max:48'],
+			'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+			'password' => ['required', 'string', 'min:6', 'confirmed'],
 		]);
 		
 		$user = User::create($data);
