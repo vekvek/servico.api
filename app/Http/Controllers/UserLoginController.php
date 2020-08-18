@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Validation\ValidationException;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -22,8 +23,9 @@ class UserLoginController extends Controller
 		]);
 		
 		if (!$token = Auth::attempt($credentials)) {
-			return response()
-				->json(['message' => 'Invalid credentials!'], 401);
+      throw ValidationException::withMessages([
+          'email' => 'Invalid credentials!'
+        ]);
 		}
 		
 		return response()
